@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ValorantInfoApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+370fae7f5241a3adf85a5c7c92ea4bf6b49f7865")]
 [assembly: System.Reflection.AssemblyProductAttribute("ValorantInfoApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ValorantInfoApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
