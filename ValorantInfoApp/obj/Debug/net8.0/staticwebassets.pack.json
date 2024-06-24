@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/obj/Debug/net8.0/compressed/7rukjz2jhm.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/obj/Debug/net8.0/scopedcss/bundle/ValorantInfoApp.styles.css",
+      "PackagePath": "staticwebassets/ValorantInfoApp.styles.css"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/wwwroot/icon-192.png",
+      "PackagePath": "staticwebassets/icon-192.png"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/benjaminstroup/Documents/C#/ValorantInfoApp/ValorantInfoApp/wwwroot/sample-data/weather.json",
+      "PackagePath": "staticwebassets/sample-data/weather.json"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ValorantInfoApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ValorantInfoApp.props",
+      "PackagePath": "build\\ValorantInfoApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ValorantInfoApp.props",
+      "PackagePath": "buildMultiTargeting\\ValorantInfoApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ValorantInfoApp.props",
+      "PackagePath": "buildTransitive\\ValorantInfoApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
