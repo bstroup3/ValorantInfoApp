@@ -1,0 +1,83 @@
+# Ignore .NET build results
+bin/
+obj/
+
+# Ignore user-specific files
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Rider project files
+.idea/
+*.sln.iml
+
+# Ignore node_modules (if using any npm packages)
+node_modules/
+
+# Ignore NPM debug log
+npm-debug.log*
+
+# Ignore logs
+*.log
+
+# Ignore packages folder
+packages/
+
+# Ignore Visual Studio working directory
+.vs/
+
+# Ignore local history of files
+.history/
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore the Publish folder (if not used for deployment)
+wwwroot/
+
+# Ignore files and folders related to GitHub Actions workflows
+.github/workflows/
+
+# Ignore the GitHub Pages deployment folder
+gh-pages/
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore temporary build files
+artifacts/
+
+# Ignore configuration files
+*.config
+*.bak
+
+# Ignore deployment settings
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore coverage output
+coverage/
+
+# Ignore build output
+out/
+dist/
+
+# Ignore lock files
+*.lock
+
+# Ignore Rider specific files
+.idea/
+.idea_modules/
+*.iws
+*.iml
+*.ipr
+atlassian-ide-plugin.xml
+# Ignore ReSharper specific files
+_ReSharper.Caches/
