@@ -1,4 +1,4 @@
-﻿@inherits LayoutComponentBase
+﻿@* @inherits LayoutComponentBase
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -13,4 +13,70 @@
             @Body
         </article>
     </main>
-</div>
+</div> *@
+@inherits LayoutComponentBase
+@using MudBlazor
+<PageTitle>Valorant App</PageTitle>
+
+<MudLayout>
+    <MudAppBar Style="">
+        <MudIconButton Icon="@Icons.Material.Outlined.Menu" Color="Color.Inherit" OnClick="@((e) => DrawerToggle())"/>
+        <MudText Typo="Typo.h5">Valorant App</MudText>
+    </MudAppBar>
+    <MudDrawer @bind-Open="@_drawerOpen" Variant="@DrawerVariant.Temporary">
+        <MudNavMenu Color="Color.Secondary">
+            <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+            <MudNavLink Href="/agents" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Person">Agents</MudNavLink>
+            <MudNavLink Href="/maps" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Map">Maps</MudNavLink>
+            <MudNavLink Href="/armory" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Map">Armory</MudNavLink>
+            @* <MudNavLink Href="/aimtrainer" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LocationSearching">Aim Trainer</MudNavLink> *@
+        </MudNavMenu>
+    </MudDrawer>
+    <MudMainContent Class="mt-2">
+        <ErrorBoundary Context="errorContext" @ref="_errorBoundary">
+            <ChildContent>
+                <MudContainer MaxWidth="MaxWidth.ExtraLarge">
+                    <MudPaper Class="pa-4">
+                        @Body
+                    </MudPaper>
+                </MudContainer>
+            </ChildContent>
+        </ErrorBoundary>
+    </MudMainContent>
+</MudLayout>
+
+<MudThemeProvider Theme="@_currentTheme" @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode" />
+<MudSnackbarProvider />
+
+@code 
+{
+    private bool _isDarkMode;
+    private MudThemeProvider? _mudThemeProvider;
+    private ErrorBoundary? _errorBoundary;
+    private bool _drawerOpen;
+
+    private readonly MudTheme _currentTheme = new()
+    {
+     PaletteDark = new PaletteDark
+     {
+        Secondary = Colors.Red.Accent2,
+        AppbarBackground = Colors.Red.Accent2,
+     },
+    };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        _isDarkMode = await _mudThemeProvider!.GetSystemPreference();
+        StateHasChanged();
+    }
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    protected override void OnParametersSet()
+    {
+        _errorBoundary?.Recover();
+    }
+}
