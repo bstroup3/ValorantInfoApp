@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ValorantInfoApp",
   "resources": {
-    "hash": "sha256-umivhA6ipaXUc1t95KKA8znzd6kZe8giUucO/3oXE44=",
+    "hash": "sha256-kk9IogCoQuAfWuIzo7Wvu8Vl5JjFQn5zLeduAuSCmfw=",
     "jsModuleNative": {
       "dotnet.native.8.0.6.suuomc2hr0.js": "sha256-YU6M9+jtDVnB8/wtrgIndOstzNh778Ls8g9XnbjorSk="
     },
@@ -85,7 +85,7 @@
       "System.Xml.Linq.wasm": "sha256-boUyMjD8tjpz+RHjMOdCJbIG/hcEQuorcGhKEvCs9Ys=",
       "System.Xml.ReaderWriter.wasm": "sha256-jCT4+BquEMUHoik62ALmyoDCDQ2B37UKPwiot+7LKzQ=",
       "System.Xml.XDocument.wasm": "sha256-2EMN2rk2MilmnBGG73CPy03svcUTyJo3FEAsgRRkfsk=",
-      "ValorantInfoApp.wasm": "sha256-GeSnAN5ACqKRRn15fqXObywZ4ORmKBl15cJm5/BRE1E="
+      "ValorantInfoApp.wasm": "sha256-dgaywXSVQQiJE7PK5lKScbahxnBhC6kwXkMSff7Yovw="
     }
   },
   "cacheBootResources": true,
