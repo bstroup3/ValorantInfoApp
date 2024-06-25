@@ -1,20 +1,4 @@
-﻿@* @inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div> *@
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
 @using MudBlazor
 <PageTitle>Valorant App</PageTitle>
 
@@ -50,7 +34,7 @@
 
 @code 
 {
-    private bool _isDarkMode;
+    private bool _isDarkMode = true;
     private MudThemeProvider? _mudThemeProvider;
     private ErrorBoundary? _errorBoundary;
     private bool _drawerOpen;
@@ -64,11 +48,11 @@
      },
     };
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    @* protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         _isDarkMode = await _mudThemeProvider!.GetSystemPreference();
         StateHasChanged();
-    }
+    } *@
 
     void DrawerToggle()
     {

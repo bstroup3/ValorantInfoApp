@@ -1,0 +1,12 @@
+﻿@namespace ValorantInfoApp.Features.Pages.Components.ArmorCard
+
+<MudPaper Class="card align-center" Style="height: 95%;">
+    <MudImage Src="@PictureUri" Style="height:7vw; width: auto; margin-top: 1vw;" />
+    <MudText Typo="Typo.h6">@Name</MudText>
+</MudPaper>
+
+@code
+{
+    [Parameter] public string PictureUri { get; set; } = null!;
+    [Parameter] public string Name { get; set; } = null!;
+}

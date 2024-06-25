@@ -1,0 +1,14 @@
+﻿@namespace ValorantInfoApp.Features.Pages.Components.MapCard
+
+<MudContainer Class="card_container" Style="height: 20vw; width: 25vw;">
+    <MudPaper Class="card align-center">
+        <MudImage Src="@PictureUri" Style="height: 15vw; width: 20vw; margin-top: 1vw;" />
+        <MudText Typo="Typo.h6">@Name</MudText>
+    </MudPaper>
+</MudContainer>
+
+@code
+{
+    [Parameter] public string PictureUri { get; set; } = null!;
+    [Parameter] public string Name { get; set; } = null!;
+}
