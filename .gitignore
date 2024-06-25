@@ -37,7 +37,8 @@ packages/
 *.temp
 
 # Ignore the Publish folder (if not used for deployment)
-wwwroot/
+wwwroot/*
+!wwwroot/ValorantLogo.png
 
 # Ignore files and folders related to GitHub Actions workflows
 .github/workflows/
