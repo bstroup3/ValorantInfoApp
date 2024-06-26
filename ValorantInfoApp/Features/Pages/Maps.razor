@@ -1,0 +1,24 @@
+﻿@page "/maps"
+@using ValorantInfoApp.Features.Pages;
+@using ValorantInfoApp.Features.Pages.Components.MapCard;
+
+@if (_isLoading)
+{
+    <MudSkeleton />
+    <MudSkeleton SkeletonType="SkeletonType.Rectangle" Width="20vw" Height="20vw" />
+}
+else
+{
+    <MudContainer>
+    <MudItem Class="d-flex justify-center align-center">
+        <MudText Typo="Typo.h3">Maps</MudText>
+    </MudItem>
+    <MudGrid>
+        @foreach (var map in @_response.Maps)
+            {
+                <MapCard Name="@map.DisplayName" PictureUri="@map.Splash.AbsoluteUri" />
+            }
+        </MudGrid>
+
+    </MudContainer>
+}

@@ -1,0 +1,87 @@
+﻿@page "/armory"
+@using ValorantInfoApp.Features.Pages;
+@using ValorantInfoApp.Features.Pages.Components.WeaponCard;
+@using ValorantInfoApp.Features.Pages.Components.ArmorCard;
+
+@if (_isLoading)
+{
+    <MudSkeleton />
+    <MudSkeleton SkeletonType="SkeletonType.Rectangle" Width="20vw" Height="20vw" />
+}
+else
+{
+    <MudContainer Style="height: 100vh;">
+    <MudItem Class="d-flex justify-center align-center">
+        <MudText Typo="Typo.h3">Armory</MudText>
+    </MudItem>
+    <MudGrid Class="d-flex justify-center align-center" Style="height:80vh; width: auto;">
+        <MudPaper Class="d-flex justify-start align-center flex-column" Width="12vw" Height="70vh" Elevation="0">
+            <MudText>SIDEARMS</MudText>
+            @foreach (var sidearm in _response.Sidearms)
+                {
+                    <MudContainer Class="card_container sidearm">
+                        <WeaponCard Name="@sidearm.DisplayName" PictureUri="@sidearm.DisplayIcon.AbsoluteUri" />
+                    </MudContainer>
+                }
+        </MudPaper>
+            <MudPaper Class="d-flex justify-start align-center flex-column" Width="20vw" Height="70vh" Elevation="0">
+                <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%; width: 100%;">
+                    <MudText>SMGS</MudText>
+                    @foreach (var smg in _response.Smgs)
+                    {
+                    <MudContainer Class="card_container smg">
+                        <WeaponCard Name="@smg.DisplayName" PictureUri="@smg.DisplayIcon.AbsoluteUri" />
+                    </MudContainer>    
+                    }
+                </MudItem>
+                <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%;">
+                    <MudText>SHOTGUNS</MudText>
+                    @foreach (var shotgun in _response.Shotguns)
+                    {
+                    <MudContainer Class="card_container shotgun">
+                        <WeaponCard Name="@shotgun.DisplayName" PictureUri="@shotgun.DisplayIcon.AbsoluteUri" />
+                    </MudContainer>                       
+                    }
+                </MudItem>
+            </MudPaper>
+            <MudPaper Class="d-flex justify-start align-center flex-column" Width="20vw" Height="70vh" Elevation="0">
+                <MudText>RIFLES</MudText>
+                @foreach (var rifle in _response.Rifles)
+                {
+                    <MudContainer Class="card_container rifle">
+                        <WeaponCard Name="@rifle.DisplayName" PictureUri="@rifle.DisplayIcon.AbsoluteUri" />
+                    </MudContainer>                  
+                }
+            </MudPaper>
+            <MudPaper Class="d-flex justify-start align-center flex-column" Width="20vw" Height="70vh" Elevation="0">
+                <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%;">
+                    <MudText>SNIPERS</MudText>
+                    @foreach (var sniper in _response.Snipers)
+                    {
+                    <MudContainer Class="card_container sniper">
+                        <WeaponCard Name="@sniper.DisplayName" PictureUri="@sniper.DisplayIcon.AbsoluteUri" />
+                    </MudContainer>
+                    }
+                </MudItem>
+                <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%;">
+                    <MudText>MACHINE GUNS</MudText>
+                    @foreach (var heavy in _response.Heavys)
+                    {
+                    <MudContainer Class="card_container heavy">
+                        <WeaponCard Name="@heavy.DisplayName" PictureUri="@heavy.DisplayIcon.AbsoluteUri" />
+                    </MudContainer>                    
+                    }
+                </MudItem>
+            </MudPaper>
+            <MudPaper Class="d-flex justify-start align-center flex-column" Width="15vw" Height="70vh" Elevation="0">
+                <MudText>ARMOR</MudText>
+                @foreach (var armor in _response.Armor)
+                {
+                    <MudContainer Class="card_container armor">
+                        <ArmorCard Name="@armor.DisplayName" PictureUri="@armor.DisplayIcon.AbsoluteUri" />
+                    </MudContainer>
+                }
+            </MudPaper>
+        </MudGrid>
+    </MudContainer>
+}
