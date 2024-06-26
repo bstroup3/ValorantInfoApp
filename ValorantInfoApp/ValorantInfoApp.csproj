@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot/_redirects" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot/css/site.css" />
+    <_ContentIncludedByDefault Remove="wwwroot/_redirects" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot/_redirects" />
   </ItemGroup>
 
   <ItemGroup>

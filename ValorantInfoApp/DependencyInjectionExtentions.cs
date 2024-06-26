@@ -15,7 +15,7 @@ public static class DependencyInjectionExtensions
             // Register MediatR services
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<AgentRequestHandler>());
 
-            services.AddSingleton<IValorantApiService, ValorantApiService>();
+            services.AddScoped<IValorantApiService, ValorantApiService>();
             services.AddSingleton<ValorantApiSettings>();
 
             services.AddHttpClient(); // Register HttpClient
