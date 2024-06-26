@@ -29,12 +29,11 @@
     </MudMainContent>
 </MudLayout>
 
-<MudThemeProvider Theme="@_currentTheme" @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode" />
+<MudThemeProvider Theme="@_currentTheme" @ref="@_mudThemeProvider" IsDarkMode="true" />
 <MudSnackbarProvider />
 
 @code 
 {
-    private bool _isDarkMode = true;
     private MudThemeProvider? _mudThemeProvider;
     private ErrorBoundary? _errorBoundary;
     private bool _drawerOpen;
@@ -47,12 +46,6 @@
         AppbarBackground = Colors.Red.Accent2,
      },
     };
-
-    @* protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        _isDarkMode = await _mudThemeProvider!.GetSystemPreference();
-        StateHasChanged();
-    } *@
 
     void DrawerToggle()
     {
