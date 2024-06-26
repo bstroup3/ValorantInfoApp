@@ -1,0 +1,39 @@
+.card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.card_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.sidearm{
+    height: 20%;
+}
+
+.smg{
+    height: 50%;
+}
+
+.shotgun{
+    height: 50%;
+}
+.rifle{
+    height: 25%;
+}
+.sniper{
+    height: 30%;
+}
+.heavy{
+    height: 50%;
+}
+.armor{
+    height: 50%;;
+}
+.card:hover
+{
+    background-color: #ff5252;
+}
