@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=./index.html">
+    <script>
+        // Script to redirect to the right page
+        var pathname = window.location.pathname;
+        var newUrl = pathname.replace(/\/?$/, "/index.html");
+        window.location.replace(newUrl);
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
