@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ValorantInfoApp",
   "resources": {
-    "hash": "sha256-C2s31SBCSCI3P8ExJJo5N2ICyz1vmGSt3M/3LlJrdFY=",
+    "hash": "sha256-vKgFiVcMM5gksG88T/mcxhkEOSUev+Jx0lal2eUiY9c=",
     "jsModuleNative": {
       "dotnet.native.8.0.6.suuomc2hr0.js": "sha256-YU6M9+jtDVnB8/wtrgIndOstzNh778Ls8g9XnbjorSk="
     },
@@ -28,7 +28,7 @@
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-87sn2TYqgdZ95sXmavjKEzoEfMgHnYQ9LOvnMX+aZcI=",
       "Microsoft.Extensions.Configuration.Json.wasm": "sha256-Sxmy2ZS134URxbHEvdbS6NcQ3zXS7UWx/5ZPpwiW7FA=",
       "Microsoft.Extensions.Configuration.wasm": "sha256-jYqHUZ07UYWc8POk7xhas6xQYH7t1qoTcylqoDqncJk=",
-      "Microsoft.Extensions.DependencyInjection.Abstractions.wasm": "sha256-eTzl95Ie06j4Gj1MiptAk24opDh6KN+34se7WM5JBpw=",
+      "Microsoft.Extensions.DependencyInjection.Abstractions.wasm": "sha256-V5GLtBJmqcglIfV/n4wZ2d6Q/NQruBiM65dLYIekjd4=",
       "Microsoft.Extensions.DependencyInjection.wasm": "sha256-gg8xZqJsBBrrNEyUGzYqhL3sqkuZ4AHAvdTdL9nZ0S0=",
       "Microsoft.Extensions.Http.wasm": "sha256-z1fp1hRlV+3V+tudnl8i5v/G0ZN4yZxDRYUaou7G1TE=",
       "Microsoft.Extensions.Localization.Abstractions.wasm": "sha256-dE2h1UxUqRgf+VIhx8G6lIu1W0tC/huKsmvl3ydfTGw=",
@@ -85,7 +85,7 @@
       "System.Xml.Linq.wasm": "sha256-boUyMjD8tjpz+RHjMOdCJbIG/hcEQuorcGhKEvCs9Ys=",
       "System.Xml.ReaderWriter.wasm": "sha256-jCT4+BquEMUHoik62ALmyoDCDQ2B37UKPwiot+7LKzQ=",
       "System.Xml.XDocument.wasm": "sha256-2EMN2rk2MilmnBGG73CPy03svcUTyJo3FEAsgRRkfsk=",
-      "ValorantInfoApp.wasm": "sha256-gAhVvHKEAZPETeHdbVNfXtlKNQe5042FD4iHbjsKzBM="
+      "ValorantInfoApp.wasm": "sha256-uy8wd6r3z0rRvsrknvSqADmnlOEeqrLwCOdKP7QQzvQ="
     }
   },
   "cacheBootResources": true,
