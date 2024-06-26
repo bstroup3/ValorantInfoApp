@@ -7,7 +7,7 @@
     <script>
         // Script to redirect to the right page
         var pathname = window.location.pathname;
-        var newUrl = pathname.replace(/\/?$/, "ValorantInfoApp");
+        var newUrl = window.location.origin + pathname.substring(0, pathname.lastIndexOf('/'));
         window.location.replace(newUrl);
     </script>
 </head>
