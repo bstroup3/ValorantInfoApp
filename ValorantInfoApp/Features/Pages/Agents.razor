@@ -13,7 +13,7 @@ else
         <MudItem Class="d-flex justify-center align-center">
             <MudText Typo="Typo.h3">Agents</MudText>
         </MudItem>
-        <MudGrid>
+        <MudGrid Spacing="2">
             @foreach (var agent in _response.Agents)
             {
                 <AgentCard Name="@agent.DisplayName" PictureUri="@agent.DisplayIcon.AbsoluteUri" />
