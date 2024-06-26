@@ -12,6 +12,14 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="ValorantInfoApp.styles.css" rel="stylesheet" />
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var currentUrl = window.location.pathname;
+            if (!currentUrl.startsWith('/ValorantInfoApp')) {
+                window.location.replace('/ValorantInfoApp' + currentUrl);
+            }
+        })();
+    </script>
 </head>
 
 <body>
