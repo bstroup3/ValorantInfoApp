@@ -15,8 +15,8 @@ else
         <MudText Typo="Typo.h3">Armory</MudText>
     </MudItem>
     <MudGrid Class="d-flex justify-center align-center">
-        <MudItem xs="1" Class="d-flex justify-start align-center flex-column" >
-            <MudText>SIDEARMS</MudText>
+        <MudItem xs="2" Class="d-flex justify-start align-center flex-column" >
+            <MudText Typo="Typo.h5">SIDEARMS</MudText>
             @foreach (var sidearm in _response.Sidearms)
                 {
                     <MudContainer Class="card_container sidearm">
@@ -26,7 +26,7 @@ else
         </MudItem>
             <MudItem xs="3" Class="d-flex justify-start align-center flex-column">
                 <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%; width: 100%;">
-                    <MudText>SMGS</MudText>
+                    <MudText Typo="Typo.h5">SMGS</MudText>
                     @foreach (var smg in _response.Smgs)
                     {
                     <MudContainer Class="card_container smg">
@@ -35,7 +35,7 @@ else
                     }
                 </MudItem>
                 <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%;">
-                    <MudText>SHOTGUNS</MudText>
+                    <MudText Typo="Typo.h5">SHOTGUNS</MudText>
                     @foreach (var shotgun in _response.Shotguns)
                     {
                     <MudContainer Class="card_container shotgun">
@@ -45,7 +45,7 @@ else
                 </MudItem>
             </MudItem>
             <MudItem xs="3" Class="d-flex justify-start align-center flex-column">
-                <MudText>RIFLES</MudText>
+                <MudText Typo="Typo.h5">RIFLES</MudText>
                 @foreach (var rifle in _response.Rifles)
                 {
                     <MudContainer Class="card_container rifle">
@@ -55,7 +55,7 @@ else
             </MudItem>
             <MudItem xs="3" Class="d-flex justify-start align-center flex-column">
                 <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%;">
-                    <MudText>SNIPERS</MudText>
+                    <MudText Typo="Typo.h5">SNIPERS</MudText>
                     @foreach (var sniper in _response.Snipers)
                     {
                     <MudContainer Class="card_container sniper">
@@ -64,7 +64,7 @@ else
                     }
                 </MudItem>
                 <MudItem Class="d-flex justify-start align-center flex-column" Style="height: 50%;">
-                    <MudText>MACHINE GUNS</MudText>
+                    <MudText Typo="Typo.h5">MACHINE GUNS</MudText>
                     @foreach (var heavy in _response.Heavys)
                     {
                     <MudContainer Class="card_container heavy">
@@ -74,7 +74,7 @@ else
                 </MudItem>
             </MudItem>
             <MudItem xs="2" Class="d-flex justify-start align-center flex-column">
-                <MudText>ARMOR</MudText>
+                <MudText Typo="Typo.h5">ARMOR</MudText>
                 @foreach (var armor in _response.Armor)
                 {
                     <MudContainer Class="card_container armor">
