@@ -37,3 +37,19 @@
 {
     background-color: #ff5252;
 }
+
+.overlay-text {
+    position: absolute;
+    font-size: 14px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    color: white; /* Adjust text color as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity as needed */
+    padding: 4px 8px; /* Adjust padding as needed */
+    border-radius: 4px; /* Adjust border radius as needed */
+}
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
