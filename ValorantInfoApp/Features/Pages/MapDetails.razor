@@ -21,7 +21,7 @@ else
             @foreach (var callout in _response.Map.Callouts)
             {
                 <div class="overlay-text"
-                    style="left: @_response.GetRelativeX(callout.Location.X, _response.Map.XMultiplier, _response.Map.XScalarToAdd)px; top: @_response.GetRelativeY(callout.Location.Y, _response.Map.YMultiplier, _response.Map.YScalarToAdd)px;">
+                    style="left: @_response.GetRelativeX(callout.Location.X, _response.Map.XMultiplier, _response.Map.XScalarToAdd, _response.Map.DisplayName)px; top: @_response.GetRelativeY(callout.Location.Y, _response.Map.YMultiplier, _response.Map.YScalarToAdd, _response.Map.DisplayName)px;">
                     @callout.RegionName
                 </div>
             }

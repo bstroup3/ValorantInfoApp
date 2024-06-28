@@ -51,20 +51,56 @@ public partial class MapDetails
 
     public class MapDetailsResponse
     {
-        public IEnumerable<string> MapsNeededRotated = ["Ascent", "Abyss", "Haven", "Icebox", "Split"];
-        public Map Map { get; set; } = null!;
-
-        public double GetRelativeX(double x, double multiplier, double scalar)
+        public IEnumerable<string> MapsNeededRotated = ["Ascent", "Abyss", "Haven", "Icebox", "Split", "Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Sunset"];
+        public Map Map { get; set; } = null!;        
+        public static readonly Dictionary<string, double> MapXModifier = new()
         {
-            var coords = (x * multiplier) + scalar*1.1;
+            {"Ascent", 1.1},
+            {"Abyss", 2d},
+            {"Bind", 0.9d},
+            {"Breeze", 1.5d},
+            {"District", 1.5d},
+            {"Drift", 1.5d},
+            {"Fracture", 0.6d},
+            {"Haven", 0.77d},
+            {"Icebox", 2.6d},
+            {"Kasbah", 2.6d},
+            {"Lotus", 1.2d},
+            {"Pearl", 1.2d},
+            {"Piazza", 1.2d},
+            {"Split", 0.95d},
+            {"Sunset", 2d},
+        };
+
+        public static readonly Dictionary<string, double> MapYModifier = new()
+        {
+            {"Ascent", 1.4},
+            {"Abyss", 1d},
+            {"Bind", 0.57d},
+            {"Breeze", 0.5d},
+            {"District", 0.5d},
+            {"Drift", 0.5d},
+            {"Fracture", 0.5d},
+            {"Haven", 1.7d},
+            {"Icebox", 1.5d},
+            {"Kasbah", 1.5d},
+            {"Lotus", 0.45d},
+            {"Pearl", 0.5d},
+            {"Piazza", 0.5d},
+            {"Split", 1.2d},
+            {"Sunset", 1.1d},
+        };
+        public double GetRelativeX(double x, double multiplier, double scalar, string name)
+        {
+            var coords = (x * multiplier) + scalar * MapXModifier[$"{name}"];
             return coords * 600;
         }
 
-        public double GetRelativeY(double y, double multiplier, double scalar)
+        public double GetRelativeY(double y, double multiplier, double scalar, string name)
         {
-            var coords =  (-y * multiplier) + scalar*1.3;
+            var coords = (-y * multiplier) + scalar * MapYModifier[$"{name}"];
 
-            return coords * 700;
+            return coords * 600;
         }
     }
 }
