@@ -24,6 +24,11 @@ jobs:
     - name: Build
       run: dotnet publish -c Release -o build_output
 
+    - name: Modify base href in index.html
+      run: |
+        cd ./output/wwwroot
+        sed -i 's|<base href="/"|<base href="/ValorantInfoApp/"|' index.html
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:

@@ -7,6 +7,17 @@
 else
 {
     <MudContainer>
-        <MudText>@_response.Map.DisplayName</MudText>
-    </MudContainer>
+    <MudText Typo="Typo.h2" Align="Align.Center">@_response.Map.DisplayName</MudText>
+    <MudItem Class="display-flex justify-center align-center">
+        @if(_response.MapsNeededRotated.Contains(_response.Map.DisplayName))
+        {
+            <MudImage Src="@_response.Map.DisplayIcon.AbsoluteUri" Style="width: 75%; height: 75%; transform: rotate(90deg);" />
+        }
+        else
+        {
+            <MudImage Src="@_response.Map.DisplayIcon.AbsoluteUri" Style="width: 75%; height: 75%;" />
+        }
+    </MudItem>
+</MudContainer>
 }
+@* Ascent Abyss Haven Icebox Split *@

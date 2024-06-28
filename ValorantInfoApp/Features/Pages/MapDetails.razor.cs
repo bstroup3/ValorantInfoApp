@@ -52,6 +52,7 @@ public partial class MapDetails
 
     public class MapDetailsResponse
     {
+        public IEnumerable<string> MapsNeededRotated = ["Ascent", "Abyss", "Haven", "Icebox", "Split"];
         public Map Map { get; set;} = null!;
     }
 }
