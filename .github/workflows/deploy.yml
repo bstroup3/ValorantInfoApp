@@ -26,7 +26,7 @@ jobs:
 
     - name: Modify base href in index.html
       run: |
-        cd ./output/wwwroot
+        cd ./build_output/wwwroot
         sed -i 's|<base href="/"|<base href="/ValorantInfoApp/"|' index.html
 
     - name: Deploy to GitHub Pages
