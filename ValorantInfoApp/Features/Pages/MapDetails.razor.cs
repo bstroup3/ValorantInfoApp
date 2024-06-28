@@ -26,7 +26,6 @@ public partial class MapDetails
         }
         catch (Exception ex)
         {
-            // Handle any errors here, e.g., logging or displaying an error message
             Console.WriteLine($"Error fetching data: {ex.Message}");
         }
         finally
@@ -39,9 +38,9 @@ public partial class MapDetails
     {
         public async Task<MapDetailsResponse> Handle(MapDetailsRequest request, CancellationToken cancellationToken)
         {
-            var map = await valorantApiService.GetMapByUuidAsync(new GetDataRequest{Uuid = new Guid(request.Id)}, cancellationToken);
+            var map = await valorantApiService.GetMapByUuidAsync(new GetDataRequest { Uuid = new Guid(request.Id) }, cancellationToken);
 
-        return new MapDetailsResponse { Map = map };
+            return new MapDetailsResponse { Map = map };
         }
     }
 
@@ -53,6 +52,19 @@ public partial class MapDetails
     public class MapDetailsResponse
     {
         public IEnumerable<string> MapsNeededRotated = ["Ascent", "Abyss", "Haven", "Icebox", "Split"];
-        public Map Map { get; set;} = null!;
+        public Map Map { get; set; } = null!;
+
+        public double GetRelativeX(double x, double multiplier, double scalar)
+        {
+            var coords = (x * multiplier) + scalar*1.1;
+            return coords * 600;
+        }
+
+        public double GetRelativeY(double y, double multiplier, double scalar)
+        {
+            var coords =  (-y * multiplier) + scalar*1.3;
+
+            return coords * 700;
+        }
     }
 }

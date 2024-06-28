@@ -8,16 +8,23 @@ else
 {
     <MudContainer>
     <MudText Typo="Typo.h2" Align="Align.Center">@_response.Map.DisplayName</MudText>
-    <MudItem Class="display-flex justify-center align-center">
-        @if(_response.MapsNeededRotated.Contains(_response.Map.DisplayName))
-        {
-            <MudImage Src="@_response.Map.DisplayIcon.AbsoluteUri" Style="width: 75%; height: 75%; transform: rotate(90deg);" />
-        }
-        else
-        {
-            <MudImage Src="@_response.Map.DisplayIcon.AbsoluteUri" Style="width: 75%; height: 75%;" />
-        }
-    </MudItem>
-</MudContainer>
+    <MudItem Class="image-container">
+        @if (_response.MapsNeededRotated.Contains(_response.Map.DisplayName))
+            {
+                <MudImage Src="@_response.Map.DisplayIcon.AbsoluteUri"
+                    Style="width: 50%; height: 75%; transform: rotate(90deg);" />
+            }
+            else
+            {
+                <MudImage Src="@_response.Map.DisplayIcon.AbsoluteUri" Style="width: 50%; height: 75%;" />
+            }
+            @foreach (var callout in _response.Map.Callouts)
+            {
+                <div class="overlay-text"
+                    style="left: @_response.GetRelativeX(callout.Location.X, _response.Map.XMultiplier, _response.Map.XScalarToAdd)px; top: @_response.GetRelativeY(callout.Location.Y, _response.Map.YMultiplier, _response.Map.YScalarToAdd)px;">
+                    @callout.RegionName
+                </div>
+            }
+        </MudItem>
+    </MudContainer>
 }
-@* Ascent Abyss Haven Icebox Split *@
