@@ -16,7 +16,7 @@ else
     <MudGrid>
         @foreach (var map in @_response.Maps)
             {
-                <MapCard Name="@map.DisplayName" PictureUri="@map.Splash.AbsoluteUri" />
+                <MapCard Name="@map.DisplayName" PictureUri="@map.Splash.AbsoluteUri" Id="@map.Uuid"/>
             }
         </MudGrid>
 

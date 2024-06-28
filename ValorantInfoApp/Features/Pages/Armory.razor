@@ -73,7 +73,7 @@ else
                     }
                 </MudItem>
             </MudItem>
-            <MudItem xs="2" Class="d-flex justify-start align-center flex-column">
+            @* <MudItem xs="2" Class="d-flex justify-start align-center flex-column">
                 <MudText Typo="Typo.h5">ARMOR</MudText>
                 @foreach (var armor in _response.Armor)
                 {
@@ -81,7 +81,7 @@ else
                         <ArmorCard Name="@armor.DisplayName" PictureUri="@armor.DisplayIcon.AbsoluteUri" />
                     </MudContainer>
                 }
-            </MudItem>
+            </MudItem> *@
         </MudGrid>
     <!-- </MudContainer> -->
 }

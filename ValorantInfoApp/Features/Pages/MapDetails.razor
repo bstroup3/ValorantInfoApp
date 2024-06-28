@@ -1,0 +1,12 @@
+﻿@page "/maps/{id}"
+@if (_isLoading)
+{
+    <MudSkeleton />
+    <MudSkeleton SkeletonType="SkeletonType.Rectangle" Width="20vw" Height="20vw" />
+}
+else
+{
+    <MudContainer>
+        <MudText>@_response.Map.DisplayName</MudText>
+    </MudContainer>
+}
