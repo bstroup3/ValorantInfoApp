@@ -16,7 +16,7 @@ else
         <MudGrid Spacing="2">
             @foreach (var agent in _response.Agents)
             {
-                <AgentCard Name="@agent.DisplayName" PictureUri="@agent.DisplayIcon.AbsoluteUri" />
+                <AgentCard Name="@agent.DisplayName" PictureUri="@agent.DisplayIcon.AbsoluteUri" Id="@agent.Uuid" />
             }
         </MudGrid>
     </MudContainer>

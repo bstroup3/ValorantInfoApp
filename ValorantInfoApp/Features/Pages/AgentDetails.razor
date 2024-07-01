@@ -1,0 +1,14 @@
+@page "/agents/{id}"
+
+@if (_isLoading)
+{
+    <MudSkeleton />
+    <MudSkeleton SkeletonType="SkeletonType.Rectangle" Width="20vw" Height="20vw" />
+}
+else
+{
+    <MudContainer>
+    <MudText Typo="Typo.h2" Align="Align.Center">@_response.Agent.DisplayName</MudText>
+    <MudImage Src="@_response.Agent.FullPortraitV2.AbsoluteUri" Style="width: 50%; height: 75%;"/>
+    </MudContainer>
+}

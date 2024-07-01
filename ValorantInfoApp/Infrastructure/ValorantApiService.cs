@@ -12,6 +12,7 @@ public interface IValorantApiService
     public Task<Weapon[]> GetWeaponsAsync(GetDataRequest request, CancellationToken cancellationToken);
     public Task<Armor[]> GetArmorAsync(GetDataRequest request, CancellationToken cancellationToken);
     public Task<Map> GetMapByUuidAsync(GetDataRequest request, CancellationToken cancellationToken);
+    public Task<Agent> GetAgentByUuidAsync(GetDataRequest request, CancellationToken cancellationToken);
 }
 public class ValorantApiService(ValorantApiSettings valorantApiSettings, HttpClient httpClient) : IValorantApiService
 {
@@ -60,6 +61,17 @@ public class ValorantApiService(ValorantApiSettings valorantApiSettings, HttpCli
         var map = getMapResponse.Data.Where(m => m.Uuid == request.Uuid).First();
 
         return map;
+    }
+
+    public async Task<Agent> GetAgentByUuidAsync(GetDataRequest request, CancellationToken cancellationToken)
+    {
+        var requestUrl = QueryHelpers.AddQueryString(valorantApiSettings.BaseUrl + $"agents/", nameof(GetDataRequest.Limit), request.Limit.ToString());
+        var json = await httpClient.GetStringAsync(requestUrl, cancellationToken);
+        var getAgentResponse = GetAgentsResponse.FromJson(json);
+
+        var agent = getAgentResponse.Data.Where(m => m.Uuid == request.Uuid).First();
+
+        return agent;
     }
 }
 
