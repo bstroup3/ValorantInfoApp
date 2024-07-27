@@ -18,7 +18,7 @@ else
         <MudItem xs="6" Class="d-flex justify-center align-items-center">
             <MudImage Src="@_response.Agent.FullPortraitV2.AbsoluteUri" Style="width: 100%; height: 100%;" />
         </MudItem>
-        <MudItem xs="6" Class=" d-flex flex-column align-center justify-start">
+         <MudItem xs="6" Class=" d-flex flex-column align-center justify-start">
             @if (_response.Agent.Abilities.Count() > 4)
                 {
                     <MudText Typo="Typo.h4" Align="Align.Center">Abilities</MudText>
@@ -32,10 +32,19 @@ else
                         }
                     </MudGrid>
                     <MudText Typo="Typo.h4" Align="Align.Center">Passive</MudText>
+                    @if(@_response.Agent.Abilities.Where(a => a.Slot.ToString() == "Passive").First().DisplayIcon == null)
+                    {
                     <MudItem xs="3" Class="d-flex flex-column align-center justify-center">
-                        <MudImage Src="@_response.Agent.Abilities.Last().DisplayIcon.AbsoluteUri" Style="width: 75%; height: auto;" />
-                        <MudText Align="Align.Center">@_response.Agent.Abilities.Last().DisplayName</MudText>
+                        <MudText Align="Align.Center" Typo="Typo.h5">@_response.Agent.Abilities.Where(a => a.Slot.ToString() == "Passive").First().DisplayName</MudText>
                     </MudItem>
+                    }
+                    else
+                    {
+                    <MudItem xs="3" Class="d-flex flex-column align-center justify-center">
+                        <MudImage Src="@_response.Agent.Abilities.Where(a => a.Slot.ToString() == "Passive").First().DisplayIcon.AbsoluteUri" Style="width: 75%; height: auto;" />
+                        <MudText Align="Align.Center">@_response.Agent.Abilities.Where(a => a.Slot.ToString() == "Passive").First().DisplayName</MudText>
+                    </MudItem>
+                    }
                 }
                 else
                 {
