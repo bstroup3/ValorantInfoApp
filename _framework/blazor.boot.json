@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ValorantInfoApp",
   "resources": {
-    "hash": "sha256-e7l4lzwhe84NkwGnKOYVq6NiasnobggahynJzgR+nS0=",
+    "hash": "sha256-zEly9zOQW5IV03RpK/+TmY7+bDuhcvSoAbtKCldYtkg=",
     "jsModuleNative": {
       "dotnet.native.8.0.7.pvkr2na9g4.js": "sha256-tFsxPBbhkdn6GKNBKvCRLzrfAHdyM86odYTe0MtrwMk="
     },
@@ -57,7 +57,7 @@
       "System.Drawing.Primitives.wasm": "sha256-lAh3Hfu31hhT77A7N7GibtFc85LUJgpSocPbCquG+A4=",
       "System.Drawing.wasm": "sha256-23mPH+93oGEPNj6MKZPWr72CSa0wzCx/uD3Q+SNOx2Y=",
       "System.Linq.Expressions.wasm": "sha256-g0IpW131RWxesNMT4BddzmR3ABVreIAYFj1B3VjJ5AA=",
-      "System.Linq.wasm": "sha256-K1SdvBSGSDniCACb638F1FAy93mYyS3YYs/djPYYeCw=",
+      "System.Linq.wasm": "sha256-nFwgtzKs28tSsJSKN2nRykY3KR8EdC65gYipwgFI91Y=",
       "System.Memory.wasm": "sha256-oeDqUq7qFsn5dYS1i8+vhQcZCxJxuEbP9DGgk5Ugz6w=",
       "System.Net.Http.wasm": "sha256-5c0ZR7+zsqeI3cvCD2ZUI7TvK6iupi1PZv002ovuFq8=",
       "System.Net.Primitives.wasm": "sha256-iOTAFZLKrnyiNiQaL+F6SjfJnToWwEK5tG5GKW933c4=",
@@ -85,7 +85,7 @@
       "System.Xml.Linq.wasm": "sha256-/l9xhzzlsx5QEZu0+CRvh38B0upd1yGgiazpJQ4jaco=",
       "System.Xml.ReaderWriter.wasm": "sha256-OHzYq0IajcN8Sx4E1MWV6K88/cp3AppB4gD4wVKK3uc=",
       "System.Xml.XDocument.wasm": "sha256-yUP68D2v4eUZxPjA28fF+Uiue+kDStfpNfUdsU5tXSI=",
-      "ValorantInfoApp.wasm": "sha256-BvY1KDXaveiMwDx2efkuY2YeYGZMVrbj4ujQGbMBayo="
+      "ValorantInfoApp.wasm": "sha256-plYI8jDHU2n4tYkjhctqKsT12hNwHsmDw44Qs8Q5NVE="
     }
   },
   "cacheBootResources": true,
