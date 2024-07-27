@@ -18,7 +18,7 @@ else
         <MudItem xs="6" Class="d-flex justify-center align-items-center">
             <MudImage Src="@_response.Agent.FullPortraitV2.AbsoluteUri" Style="width: 100%; height: 100%;" />
         </MudItem>
-        <MudItem xs="6" Class=" d-flex flex-column align-center justify-center">
+        <MudItem xs="6" Class=" d-flex flex-column align-center justify-start">
             @if (_response.Agent.Abilities.Count() > 4)
                 {
                     <MudText Typo="Typo.h4" Align="Align.Center">Abilities</MudText>
