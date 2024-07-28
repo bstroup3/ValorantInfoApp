@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Components;
 using ValorantInfoApp.Infrastructure.Agents;
-using ValorantInfoApp.Infrastructure.Maps;
 using ValorantInfoApp.Shared;
 
 namespace ValorantInfoApp.Features.Pages;
@@ -16,6 +15,7 @@ public partial class AgentDetails
     private readonly AgentDetailsRequest _request = new();
     private AgentDetailsResponse _response = new();
     private bool _isLoading;
+    private Ability _currentAbility = new();
 
     protected async override Task OnInitializedAsync()
     {
@@ -24,6 +24,7 @@ public partial class AgentDetails
         {
             _request.Id = Id;
             _response = await Mediator.Send(_request, _cts.Token);
+            _currentAbility = _response.Agent.Abilities.First();
         }
         catch (Exception ex)
         {
@@ -53,5 +54,11 @@ public partial class AgentDetails
     public class AgentDetailsResponse
     {
         public Agent Agent { get; set; } = null!;
+    }
+
+    private void UpdateCurrentAbility(Ability ability)
+    {
+        _currentAbility = ability;
+        StateHasChanged();
     }
 }
