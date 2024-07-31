@@ -56,9 +56,10 @@ public partial class AgentDetails
         public Agent Agent { get; set; } = null!;
     }
 
-    private void UpdateCurrentAbility(Ability ability)
+    public void UpdateCurrentAbility(Ability ability)
     {
         _currentAbility = ability;
+        Console.Write("The code has gotten to here");
         StateHasChanged();
     }
 }

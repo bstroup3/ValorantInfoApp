@@ -32,7 +32,7 @@ else
                         }
                         else
                         {
-                            <MudItem xs="3" Class="rounded card d-flex flex-column align-center justify-center">
+                            <MudItem xs="3" Class="rounded card d-flex flex-column align-center justify-center"  @onclick="() => UpdateCurrentAbility(ability)">
                                 <MudImage Src="@ability.DisplayIcon.AbsoluteUri" Style="width: 75%; height: auto;" />
                                 <MudText Align="Align.Center">@ability.DisplayName</MudText>
                             </MudItem>
@@ -40,8 +40,11 @@ else
                     }
                 </MudGrid>
                 <MudItem Style="margin-top: 5%;">
-                    <MudText>@_currentAbility.DisplayName</MudText>
-                    <MudText>@_currentAbility.Description</MudText>
+                    @if (_currentAbility != null)
+                    {
+                        <MudText>@_currentAbility.DisplayName</MudText>
+                        <MudText>@_currentAbility.Description</MudText>
+                    }
                 </MudItem>
             </MudItem>
         </MudGrid>
