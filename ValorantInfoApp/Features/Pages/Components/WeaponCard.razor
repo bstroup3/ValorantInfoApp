@@ -1,7 +1,8 @@
 ﻿@namespace ValorantInfoApp.Features.Pages.Components.WeaponCard
+@inject NavigationManager Navigation
 
 
-<MudPaper Class="card align-center" Style="height: 95%;">
+<MudPaper Class="card align-center" Style="height: 95%;" @onclick="RedirectToPage">
     <MudImage Src="@PictureUri" Style="height: auto; width: 100%; margin-top: 1vw;" />
     <MudText Typo="Typo.h6">@Name</MudText>
 </MudPaper>
@@ -10,4 +11,9 @@
 {
     [Parameter] public string PictureUri { get; set; } = null!;
     [Parameter] public string Name { get; set; } = null!;
+    [Parameter] public Guid Id { get; set; }
+    private void RedirectToPage()
+    {
+        Navigation.NavigateTo($"armory/{Id}");
+    }
 }

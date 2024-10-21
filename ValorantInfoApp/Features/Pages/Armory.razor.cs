@@ -9,6 +9,7 @@ namespace ValorantInfoApp.Features.Pages;
 public partial class Armory : IDisposable
 {
     [Inject] private IMediator Mediator {get; set;} = null!;
+    [Inject] private NavigationManager navigationManager {get; set; } = null!;
 
     private readonly CancellationTokenSource _cts = new();
     private readonly ArmoryRequest _request = new();
@@ -37,6 +38,11 @@ public partial class Armory : IDisposable
     {
         _cts.Cancel();
         _cts.Dispose();
+    }
+
+    public void RedirectToPage(string id)
+    {
+        navigationManager.NavigateTo($"armory/{id}");
     }
 }
 

@@ -20,7 +20,7 @@ else
             @foreach (var sidearm in _response.Sidearms)
                 {
                     <MudContainer Class="card_container sidearm">
-                        <WeaponCard Name="@sidearm.DisplayName" PictureUri="@sidearm.DisplayIcon.AbsoluteUri" />
+                        <WeaponCard Name="@sidearm.DisplayName" PictureUri="@sidearm.DisplayIcon.AbsoluteUri" Id="@sidearm.Uuid"/>
                     </MudContainer>
                 }
         </MudItem>
@@ -30,7 +30,7 @@ else
                     @foreach (var smg in _response.Smgs)
                     {
                     <MudContainer Class="card_container smg">
-                        <WeaponCard Name="@smg.DisplayName" PictureUri="@smg.DisplayIcon.AbsoluteUri" />
+                        <WeaponCard Name="@smg.DisplayName" PictureUri="@smg.DisplayIcon.AbsoluteUri" Id="@smg.Uuid"/>
                     </MudContainer>    
                     }
                 </MudItem>
@@ -39,7 +39,7 @@ else
                     @foreach (var shotgun in _response.Shotguns)
                     {
                     <MudContainer Class="card_container shotgun">
-                        <WeaponCard Name="@shotgun.DisplayName" PictureUri="@shotgun.DisplayIcon.AbsoluteUri" />
+                        <WeaponCard Name="@shotgun.DisplayName" PictureUri="@shotgun.DisplayIcon.AbsoluteUri" Id="@shotgun.Uuid"/>
                     </MudContainer>                       
                     }
                 </MudItem>
@@ -49,7 +49,7 @@ else
                 @foreach (var rifle in _response.Rifles)
                 {
                     <MudContainer Class="card_container rifle">
-                        <WeaponCard Name="@rifle.DisplayName" PictureUri="@rifle.DisplayIcon.AbsoluteUri" />
+                        <WeaponCard Name="@rifle.DisplayName" PictureUri="@rifle.DisplayIcon.AbsoluteUri" Id="@rifle.Uuid"/>
                     </MudContainer>                  
                 }
             </MudItem>
@@ -59,7 +59,7 @@ else
                     @foreach (var sniper in _response.Snipers)
                     {
                     <MudContainer Class="card_container sniper">
-                        <WeaponCard Name="@sniper.DisplayName" PictureUri="@sniper.DisplayIcon.AbsoluteUri" />
+                        <WeaponCard Name="@sniper.DisplayName" PictureUri="@sniper.DisplayIcon.AbsoluteUri" Id="@sniper.Uuid"/>
                     </MudContainer>
                     }
                 </MudItem>
@@ -68,7 +68,7 @@ else
                     @foreach (var heavy in _response.Heavys)
                     {
                     <MudContainer Class="card_container heavy">
-                        <WeaponCard Name="@heavy.DisplayName" PictureUri="@heavy.DisplayIcon.AbsoluteUri" />
+                        <WeaponCard Name="@heavy.DisplayName" PictureUri="@heavy.DisplayIcon.AbsoluteUri" Id="@heavy.Uuid"/>
                     </MudContainer>                    
                     }
                 </MudItem>
