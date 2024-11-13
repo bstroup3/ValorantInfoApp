@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.AspNetCore.Components;
-using ValorantInfoApp.Infrastructure.Agents;
 using ValorantInfoApp.Infrastructure.Weapons;
 using ValorantInfoApp.Shared;
 

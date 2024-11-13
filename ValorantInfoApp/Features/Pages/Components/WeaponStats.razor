@@ -1,0 +1,14 @@
+﻿@namespace ValorantInfoApp.Features.Pages.Components.WeaponStats
+
+<MudPaper xs="12" Class="d-flex flex-column align-center justify-center">
+    <MudText>@StatName</MudText>
+    <MudText>@StatValue</MudText>
+    <MudText>@UnitOfMeasure</MudText>
+</MudPaper>
+
+@code
+{
+    [Parameter] public string StatName { get; set; } = null!;
+    [Parameter] public string StatValue { get; set; } = null!;
+    [Parameter] public string UnitOfMeasure { get; set; } = null!;
+}

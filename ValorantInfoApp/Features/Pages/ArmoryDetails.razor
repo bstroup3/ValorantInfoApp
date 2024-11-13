@@ -1,4 +1,6 @@
 ﻿@page "/armory/{id}"
+
+@using ValorantInfoApp.Features.Pages.Components.WeaponStats;
 @if (_isLoading)
 {
     <MudSkeleton />
@@ -16,8 +18,41 @@ else
             <MudImage Src="@_response.Weapon.DisplayIcon.AbsoluteUri" Style="width: 100%; height: 100%;" />
         </MudItem>
         <MudItem xs="6" Class=" d-flex flex-column align-center justify-start">
-            
-        </MudItem>
-    </MudGrid>
-</MudContainer>
+            @if (_response.Weapon.WeaponStats.FireMode is not null)
+                {
+                    <MudItem>Fire Mode:
+                        @_response.Weapon.WeaponStats.FireMode.ToString().Substring(@_response.Weapon.WeaponStats.FireMode.ToString().IndexOf(':')
+                                 + 2)</MudItem>
+                }
+                <MudItem>Wall Penetration: @_response.Weapon.WeaponStats.WallPenetration.ToString().Substring(27)</MudItem>
+                <MudGrid xs="6" Class="d-flex flex-row align-center justify-center" Style="width: 100%; height: 100%;">
+                    <MudItem xs="6">
+                        <WeaponStats StatName="Fire Rate" StatValue="@_response.Weapon.WeaponStats.FireRate.ToString()"
+                            UnitOfMeasure="rds/sec" />
+                    </MudItem>
+                    <MudItem xs="6">
+                        <WeaponStats StatName="Run Speed"
+                            StatValue="@_response.Weapon.WeaponStats.RunSpeedMultiplier.ToString()" UnitOfMeasure="m/sec" />
+                    </MudItem>
+                    <MudItem xs="6">
+                        <WeaponStats StatName="Equip Speed"
+                            StatValue="@_response.Weapon.WeaponStats.EquipTimeSeconds.ToString()" UnitOfMeasure="sec" />
+                    </MudItem>
+                    <MudItem xs="6">
+                        <WeaponStats StatName="1st Shot Spread"
+                            StatValue="@_response.Weapon.WeaponStats.FirstBulletAccuracy.ToString()" UnitOfMeasure="deg" />
+                    </MudItem>
+                    <MudItem xs="6">
+                        <WeaponStats StatName="Reload Speed"
+                            StatValue="@_response.Weapon.WeaponStats.ReloadTimeSeconds.ToString()" UnitOfMeasure="sec" />
+                    </MudItem>
+                    <MudItem xs="6">
+                        <WeaponStats StatName="Magazine" StatValue="@_response.Weapon.WeaponStats.MagazineSize.ToString()"
+                            UnitOfMeasure="rds" />
+                    </MudItem>
+                </MudGrid>
+
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
 }
