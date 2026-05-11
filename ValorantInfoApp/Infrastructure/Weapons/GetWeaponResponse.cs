@@ -338,7 +338,7 @@ internal class LevelItemConverter : JsonConverter
             case "EEquippableSkinLevelItem::Voiceover":
                 return LevelItem.EEquippableSkinLevelItemVoiceover;
         }
-        throw new Exception("Cannot unmarshal type LevelItem");
+        return null!;
     }
 
     public override void WriteJson(JsonWriter writer, object? untypedValue, JsonSerializer serializer)
@@ -420,7 +420,7 @@ internal class AltFireTypeConverter : JsonConverter
             case "EWeaponAltFireDisplayType::Shotgun":
                 return AltFireType.EWeaponAltFireDisplayTypeShotgun;
         }
-        throw new Exception("Cannot unmarshal type AltFireType");
+        return null!;
     }
 
     public override void WriteJson(JsonWriter writer, object? untypedValue, JsonSerializer serializer)
